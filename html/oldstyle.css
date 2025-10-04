@@ -1,0 +1,381 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #020100;
+    font-family: serif;
+    font-size: 1rem;
+}   
+
+main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin: 0px auto; 
+    display: grid; 
+    gap: 1px;
+
+}
+
+section {
+    max-width: 22rem; 
+    max-height: 22rem; 
+    padding-left: .5rem; 
+    background-color: #ECF0EF;
+    border: 1px solid #020100; 
+    aspect-ratio: 1 / 1;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Button styling */
+.invert-button {
+  top: 1rem;
+  right: 1rem;
+  padding: .5rem;
+  width: 10rem; 
+  background-color: #020100; 
+  border: 1px #ECF0EF solid; 
+  color: #ECF0EF;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 1000;
+
+}
+
+.invert-button:hover {
+  background-color: #FD0000;
+}
+
+body.inverted {
+  background: #ECF0EF;
+  color: #020100;
+}
+
+
+body.inverted section {
+  background: #ECF0EF;
+  color: #020100;
+}
+
+#welcome {
+  padding-top: 2rem; 
+  text-align: center;
+}
+
+#location {
+    padding-top: 1rem; 
+    margin: auto; 
+    background-color: #020100;
+    color: #ECF0EF; 
+
+}
+
+#about {
+  background-color: #020100;
+  color: #ECF0EF; 
+  padding-top: 1rem; 
+  text-align: left;
+  margin: auto; 
+
+}
+
+#settings {
+  padding-top: 2rem; 
+  padding-left: 1rem; 
+  background-color: #020100;
+  color: #ECF0EF; 
+
+}
+
+#suns {
+  padding-top: 2rem; 
+  margin: auto; 
+  background-color: #020100;
+  color: #ECF0EF; 
+}
+
+.sunlabel {
+  color: #ECF0EF; 
+}
+
+.suntime {
+  color: #FD0000;
+}
+
+#controls {
+  width: 95%; 
+  padding: 2px; 
+  padding-left: 3px;
+  border: #ECF0EF 1px solid;
+}
+
+/* timer section with timer clock */
+#timer {
+    background-color: #020100;
+    color: #ECF0EF; 
+    text-align: center;
+    padding-top: 2rem;
+}
+
+#clock {
+    position: relative;
+    width: 7rem;
+    height: 7rem;
+    border: 2px solid #ECF0EF;
+    border-radius: 50%;
+    margin: 1rem auto;
+  }
+  
+.center-circle {
+    position: absolute;
+    width: .5rem;
+    height: .5rem;
+    background: #ECF0EF;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .hand {
+    position: absolute;
+    width: 50%; /* Length of the hand relative to clock radius */
+    height: 1px; /* Thickness of the hand */
+    background: #ECF0EF;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 50%; /* Rotate around the base of the hand */
+    transform: rotate(90deg);
+    transition: transform 0.1s cubic-bezier(0.4, 2.3, 0.3, 1);
+  }
+  
+  .hour-hand {
+    width: 35%; /* Shorter length for hour hand */
+    height: .1rem;
+    background: #ECF0EF;
+  }
+  
+  .minute-hand {
+    width: 45%; /* Medium length for minute hand */
+    height: .2rem;
+    background: #ECF0EF;
+  }
+  
+.second-hand {
+    width: 48%; /* Longest hand for seconds */
+    height: .1rem;
+    background: #FD0000;
+}
+
+.redtext {
+  color: #FD0000;
+}
+
+#weather {
+  color: #FD0000;
+}
+#time-description {
+    margin-top: 2rem; 
+    color: #FD0000;
+}
+
+ #time-text {
+    font-size: 1rem;
+    color: #FD0000;
+  }
+
+  #site_code {
+    padding-top: 2rem; 
+    text-align: center;
+  }
+
+  #lab_org {
+    padding-top: 2rem; 
+    text-align: center;
+  }
+
+  #what_website {
+    padding-top: 1rem; 
+    text-align: center;
+  }
+
+  #resources {
+    padding-top: 1rem; 
+    text-align: center;
+  }
+  
+
+  #degrowing {
+    padding-top: 2rem; 
+    text-align: center; 
+  }
+
+  
+  /* local time and weather at the lab*/
+  
+  #time_temp {
+    margin: auto; 
+    background-color: #020100;
+    color: #ECF0EF; 
+    text-align: left;
+  }
+
+
+  #time {
+    display: inline;
+  }
+
+  #lab-time {
+    display: inline;
+    font-size: 1rem;
+    color: #FD0000;
+  }
+
+  #local-time {
+    display: inline;
+    font-size: 1rem;
+    color: #FD0000;
+  }
+
+  #local-date {
+    display: inline;
+    font-size: 1rem;
+    color: #FD0000;
+  }
+
+
+  #lab-time {
+    display: inline;
+    font-size: 1rem;
+    color: #FD0000;
+  }
+
+  .folder {
+      width: 60%; 
+    }
+
+    .folder:hover {
+      background-color: #fd0000a1;
+    }
+
+
+  .pdf {
+    width: 50%; 
+  }
+
+  .pdf:hover {
+    background-color: #fd0000a1;
+  }
+
+  #battery-visual {
+    background-color: #020100;;
+    padding-top: 1rem; 
+    text-align: center;
+  }
+
+  .battery-container {
+    position: relative;
+    width: 12rem;
+    margin: 0 auto;
+  }
+   
+  /* Battery outline */
+  .battery-body {
+    width: 100%;
+    height: 7rem;
+    border: 2px solid #ECF0EF;
+    border-radius: 4px;
+    background-color: #020100;
+    margin: auto;
+    margin-top: 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+    /* Red line inside the battery */
+    #battery-line {
+      height: 2px;
+      width: 100%;
+      background-color: #fd0000a1;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transition: bottom 1s ease;
+    }
+  
+
+  #battery-fill {
+    background-color: #fd0000a1;
+    height: 100%;
+    width: 0%;
+    transition: width 1s ease;
+  }
+  #battery-status {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #ECF0EF;
+  }
+  
+
+
+@media (min-width: 1200px) {
+  main {
+      grid-template-columns: repeat(6, 1fr); 
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 800px) {
+  body {
+    font-size: 75%;
+    font-size: 1rem;
+}
+  main {
+      grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
+@media (max-width: 799px) and (min-width: 500px) {
+  body {
+    font-size: 50%;
+    font-size: 1rem;
+}
+  main{
+      grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+@media (max-width: 499px) {
+  body {
+      font-size: 35%;
+      font-size: 1rem;
+  }
+  main {
+
+      grid-template-columns: repeat(2, 1fr); 
+  }
+
+  section {
+    max-width: 20rem; 
+    max-height: 20rem; 
+  }
+}

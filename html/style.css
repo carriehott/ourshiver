@@ -1,0 +1,441 @@
+------------ reset and overall styles ----------- */
+html {
+  box-sizing: border-box;
+  font-size: 1rem; 
+  transition: font-size 0.2s ease;
+}
+
+html.large-font {
+  font-size: 1.25rem; 
+}
+
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #020100;
+  font-family: serif;
+  color: #020100;
+}
+
+a {
+  text-decoration: underline; 
+  color: #FD0000;
+}
+
+/* ------------ layout ------------ */
+main {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(40vw, 18rem), 1fr));
+  width: 100vw;
+
+}
+
+#grid-container {
+  transition: all 0.2s ease;
+}
+
+
+section {
+  padding: 1%;
+  background-color: #ECF0EF;
+  aspect-ratio: 1 / 1;
+  border: 2px black solid;
+  
+
+}
+
+
+
+/* ------------ images ------------ */
+img {
+  max-width: 100%;
+}
+.folder, .pdf {
+  width: 15%;
+}
+
+.folder:hover,
+.pdf:hover {
+  background-color: #fd0000a1;
+}
+
+.weather-icon {
+  width: 15%; 
+}
+
+.serverimg img{
+  width: 75%; 
+}
+
+/* ------------ invert color button ------------ */
+.adjust-button {
+  top: 1rem;
+  right: 1rem;
+  padding: .25rem;
+  width: 50%; 
+  background-color: #020100;
+  border: 1px solid #ECF0EF;
+  color: #ECF0EF;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 1000;
+  display: block; 
+  margin: 20% auto; 
+}
+
+.adjust-button:hover {
+  background-color: #FD0000;
+}
+
+/* ------------ invert colors ------------ */
+body.inverted,
+body.inverted section {
+  background-color: #020100;
+  color: #ECF0EF;
+  border: 2px solid #ECF0EF;
+}
+
+body.inverted #location,
+body.inverted #about,
+body.inverted #settings,
+body.inverted #suns,
+body.inverted #time_temp,
+body.inverted #battery-visual,
+body.inverted #timer
+ {
+  background-color: #020100;
+  color: #ECF0EF;
+
+}
+
+body.inverted .sunlabel {
+  color: #ECF0EF;
+}
+
+body.inverted #clock {
+  border: 2px solid #ECF0EF;
+}
+
+body.inverted .battery-body  {
+  border: 2px solid #ECF0EF;
+  background-color: #020100;
+}
+
+body.inverted .folder, .pdf {
+  background-color: #ECF0EF;
+}
+
+body.inverted a{
+  color: #FD0000;
+}
+
+body.inverted .content-section{
+  background-color: #020100;
+  color: #ECF0EF;
+  border: 2px solid #ECF0EF;
+}
+
+body.inverted .content-section h1{
+  background-color: #020100;
+  color: #ECF0EF;
+}
+
+body.inverted #thanks p{
+  background-color: #020100;
+  color: #ECF0EF;
+}
+/* ------------ sections ------------ */
+
+/* ---- content sections ----- */
+#welcomeserver,
+#site_code,
+#lab_org,
+#archive, 
+#site_server,
+#resources,
+#tropicaltech,  
+#server, 
+#back, 
+#panel, 
+#redstone, 
+#firstwebsite, 
+#geologic, 
+#andrea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+#time_temp, 
+#location, 
+#about,  
+#suns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+#location p {
+  padding-left: 3%;
+}
+
+#time_temp p {
+  text-align: center;
+}
+
+#suns p {
+  text-align: center;
+}
+
+
+#content {
+  margin: 5%; 
+  width: 100%; 
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.content-section {
+  margin: 3%; 
+  text-align: left;
+  line-height: 1.5;
+  width: 45%; 
+  background-color: #ECF0EF;
+  border: 2px #020100 solid;
+  padding: 3%; 
+}
+.content-section h1 {
+  font-size: 1rem;
+  color: #020100; 
+}
+
+.centertext {
+  width: 50%; 
+  margin: auto; 
+}
+
+#ourshiver, #resources-list {
+  width: 27%;
+}
+
+#ourshiver img {
+  display: block;
+  margin: auto;
+}
+
+#welcomeessay, #serveressay, #tropicsessay {
+  width: 65%; 
+  margin-left: 10%; 
+  text-align: left;
+}
+#tropicsessay img{
+  display: block;
+  margin: auto; 
+}
+
+.center {
+  text-align: center;
+}
+
+#back {
+  margin-top: 10%; 
+  position: sticky; 
+  top: 0;
+  left: 0; 
+  z-index: 3;
+  width: 7%;  
+  height: 15vh;
+  padding-top: 5%; 
+  padding: 1%;  
+  border: 1px #020100 solid; 
+}
+
+#panel, #redstone, #server {
+  font-size: .75rem;
+}
+
+#thanks {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+  background-color: #ECF0EF;
+  border: 2px #020100 solid;
+  width: 90%;
+  padding-left: 5%; 
+  padding-right: 5%;  
+  margin: 1%; 
+  text-align: right; 
+}
+
+#thanksimg {
+  align-self: center;
+}
+
+.footnote {
+  font-size: 9pt;
+}
+/* ------------ text colors ------------ */
+.redtext,
+.suntime,
+#weather,
+#time-description,
+#local-time,
+#local-date {
+  color: #FD0000;
+}
+
+.sunlabel {
+  color: #020100;
+}
+
+/* ------------ clock ------------ */
+#clock {
+  position: relative;
+  width: 30%;
+  height: 30%;
+  border: 2px solid #020100;
+  border-radius: 50%;
+  margin: 3rem auto;
+}
+.center-circle {
+  position: absolute;
+  width: .5rem;
+  height: .5rem;
+  background: #020100;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hand {
+  position: absolute;
+  height: 1px;
+  background: #020100;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0% 50%;
+  transform: rotate(90deg);
+  transition: transform 0.1s cubic-bezier(0.4, 2.3, 0.3, 1);
+}
+.hour-hand {
+  width: 35%;
+  height: .1rem;
+}
+.minute-hand {
+  width: 45%;
+  height: .2rem;
+}
+.second-hand {
+  width: 48%;
+  height: .1rem;
+  background: #FD0000;
+}
+
+#time-description{
+  margin: auto; 
+  text-align: center;
+}
+
+/* ------------ battery level visual ------------ */
+.battery-container {
+  position: relative;
+  max-width: 18rem;
+  margin: 0 auto;
+  padding-top: 10%;
+}
+.battery-body {
+  width: 65%;
+  height: 12vh;
+  border: 2px solid #020100;
+  border-radius: 4px;
+  background-color: #ECF0EF;
+  margin: 10% auto 0;
+  position: relative;
+  overflow: hidden;
+}
+#battery-line {
+  height: 2px;
+  width: 100%;
+  background-color: #fd0000a1;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: bottom 1s ease;
+}
+#battery-fill {
+  background-color: #fd0000a1;
+  height: 100%;
+  width: 0%;
+  transition: width 1s ease;
+}
+#battery-status {
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+
+/* ---------- responsive adjustments ---------- 
+@media (min-width: 1400px) {
+  main { grid-template-columns: repeat(6, 1fr); }
+  section {
+    width: 22rem;
+    height: 22rem;
+  }
+}
+@media (max-width: 1400px) and (min-width: 1199px) {
+  main { grid-template-columns: repeat(5, 1fr); }
+  section {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 751px) {
+  main { grid-template-columns: repeat(5, 1fr); }
+  section {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+@media (max-width: 750px) and (min-width: 500px) {
+  main { grid-template-columns: repeat(3, 1fr); }
+  section {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+@media (max-width: 499px) {
+  main { grid-template-columns: repeat(2, 1fr); }
+  section {
+    width: 13rem;
+    height: 13rem;
+  }
+}
+@media (max-width: 375px) {
+  main { grid-template-columns: repeat(2, 1fr); }
+  section {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+  */
+
